@@ -1,4 +1,4 @@
-import { oswald } from "@/app/layout";
+import { oswald } from "@/app/page";
 import Image from "next/image";
 import React from "react";
 

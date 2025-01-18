@@ -1,16 +1,20 @@
-import { Oswald, Montserrat } from 'next/font/google';
+import { Montserrat } from 'next/font/google';
 import Navbar from '../components/Navbar';
 import "./globals.css";
+import { Metadata } from 'next';
 
-export const oswald = Oswald({
-  subsets: ['latin'],
-  weight: ['400', '700'],
-});
-
-export const montserrat = Montserrat({
+const montserrat = Montserrat({
   subsets: ['latin'],
   weight: ['400', '600', '700'],
 });
+
+export const metadata: Metadata = {
+  title: "MKS",
+  description: "Hair Salon",
+  icons: {
+    icon: "favicon.ico",
+  },
+};
 
 export default function RootLayout({
   children,

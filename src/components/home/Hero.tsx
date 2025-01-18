@@ -4,9 +4,14 @@ import PrimaryButton from "../general/PrimaryButton";
 import avatar from "../../../public/images/avatar.webp";
 import arrowRight from "../../../public/icons/arrow-right.svg";
 import arrowLeft from "../../../public/icons/arrow-left.svg";
-import { oswald } from "@/app/layout";
-import { montserrat } from "@/app/layout";
+import { Montserrat } from "next/font/google";
+import { oswald } from "@/app/page";
 import Image from "next/image";
+
+export const montserrat = Montserrat({
+    subsets: ['latin'],
+    weight: ['400', '600', '700'],
+  });
 
 export default function Hero(){
     return (

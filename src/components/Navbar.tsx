@@ -1,4 +1,4 @@
-import { oswald } from "@/app/layout";
+import { oswald } from "@/app/page";
 import Link from "next/link";
 import SecondaryButton from "./general/SecondaryButton";
 

@@ -2,9 +2,8 @@ import React from "react";
 import sc from '../../../public/icons/scissors.svg';
 import color from '../../../public/icons/color.svg';
 import curly from '../../../public/icons/curly.svg';
-import { oswald } from "@/app/layout";
 import ServiceCard from "./ServiceCard";
-
+import { oswald } from "@/app/page";
 
 export default function FeaturedServices(){
     return(

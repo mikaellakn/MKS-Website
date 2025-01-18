@@ -5,8 +5,7 @@ import image3 from '../../../public/images/usp-3.jpg';
 import image4 from '../../../public/images/usp-4.webp';
 import image5 from '../../../public/images/usp-5.jpg';
 import ImageGallery from "./ImageGallery";
-import { oswald } from "@/app/layout";
-
+import { oswald } from "@/app/page";
 import React from "react";
 
 export default function USP(){
