@@ -1,11 +1,6 @@
-import { Poppins, Oswald, Montserrat } from 'next/font/google';
+import { Oswald, Montserrat } from 'next/font/google';
 import Navbar from '../components/Navbar';
 import "./globals.css";
-
-export const poppins = Poppins({
-  subsets: ['latin'],
-  weight: ['400', '700'],
-});
 
 export const oswald = Oswald({
   subsets: ['latin'],
