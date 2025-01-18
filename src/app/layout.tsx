@@ -1,4 +1,3 @@
-import type { Metadata } from "next";
 import { Poppins, Oswald, Montserrat } from 'next/font/google';
 import Navbar from '../components/Navbar';
 import "./globals.css";
