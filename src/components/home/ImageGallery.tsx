@@ -1,10 +1,11 @@
 "use client";
 
 import React, { useState } from 'react';
+import Image from 'next/image';
 import { StaticImageData } from 'next/image';
 
 interface Image {
-  src: string | StaticImageData; // Allow both string and StaticImageData
+  src: string | StaticImageData;
   alt: string;
 }
 
@@ -24,7 +25,7 @@ const ImageGallery: React.FC<ImageGalleryProps> = ({ images, columns = 3, gap = 
   };
 
   const imageWrapperStyle: React.CSSProperties = {
-    overflow: 'hidden', // Ensure zoomed image stays within bounds
+    overflow: 'hidden',
   };
 
   const baseImageStyle: React.CSSProperties = {
@@ -45,8 +46,8 @@ const ImageGallery: React.FC<ImageGalleryProps> = ({ images, columns = 3, gap = 
           onMouseEnter={() => setHoveredIndex(index)}
           onMouseLeave={() => setHoveredIndex(null)}
         >
-          <img
-            src={typeof image.src === 'string' ? image.src : image.src.src} // Handle StaticImageData
+          <Image
+            src={image.src}
             alt={image.alt}
             style={{
               ...baseImageStyle,

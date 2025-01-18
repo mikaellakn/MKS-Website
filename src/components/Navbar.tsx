@@ -1,7 +1,5 @@
 import { oswald } from "@/app/layout";
-import Image from "next/image";
 import Link from "next/link";
-import Logo from '../../public/images/logo.png';
 import SecondaryButton from "./general/SecondaryButton";
 
 export default function Navbar() {

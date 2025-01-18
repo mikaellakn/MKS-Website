@@ -3,7 +3,6 @@ import sc from '../../../public/icons/scissors.svg';
 import color from '../../../public/icons/color.svg';
 import curly from '../../../public/icons/curly.svg';
 import { oswald } from "@/app/layout";
-import Image from "next/image";
 import ServiceCard from "./ServiceCard";
 
 
