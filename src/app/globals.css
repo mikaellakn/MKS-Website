@@ -15,6 +15,7 @@
   --foreground: #171717;
   --primary-color : #F8FAFC;
   --secondary-color: #000957;
+  --tertiary-color: #D9EAFD;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -273,4 +274,58 @@ body {
   justify-content: center;
   align-items: start;
   row-gap: 30px;
+}
+
+/* ===========================ABOUT PAGE==================== */
+/* ===============MISSION=========== */
+.mission {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 120px 120px 300px 120px;
+  width: 100%;
+  background-color: #D9EAFD;
+  color: var(--secondary-color);
+  text-align: center;
+  gap: 30px;
+}
+
+.mission-2{
+  display: flex;
+  min-height: 100vh;
+  flex-direction: row;
+  justify-content: center;
+  align-items: start;
+  padding: 500px 190px 120px 190px;
+  width: 100%;
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+  text-align: center;
+  gap: 30px
+}
+
+/* =============TEAM================== */
+
+.team{
+  min-height: 100vh;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 100px 60px;
+  width: 100%;
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  text-align: center;
+  gap: 30px;
+}
+
+/* =====================SERVICES============== */
+.service-card ul{
+  padding: 20px 0;
+}
+.service-card li{
+  font-size: 20px;
+  margin: 10px 0;
 }
