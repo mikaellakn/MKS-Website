@@ -1,7 +1,6 @@
 import Hero from "@/components/products/Hero";
 import ProductSection from "@/components/products/ProductSection";
 import React from "react";
-import image from "../../../public/images/hairProduct.webp";
 
 const ProductsPage =()=>{
     const products = [
@@ -10,7 +9,7 @@ const ProductsPage =()=>{
           name: 'Argan Oil Hair Serum',
           subtitle: 'Deep Nourishment & Shine',
           provider: "Nature's Touch",
-          image: image,
+          image: "/images/hairProduct.webp",
           description: 'A premium argan oil serum that nourishes and revitalizes dry, frizzy hair.',
           price: 19.99,
           ingredients: ['Argan Oil', 'Vitamin E', 'Jojoba Oil'],
@@ -21,7 +20,7 @@ const ProductsPage =()=>{
           name: 'Coconut Curl Cream',
           subtitle: 'Define and Moisturize',
           provider: 'Tropical Bliss',
-          image: image,
+          image: "/images/hairProduct.webp",
           description: 'Enhance your curls with this hydrating and defining cream made with coconut oil.',
           price: 14.99,
           ingredients: ['Coconut Oil', 'Shea Butter', 'Aloe Vera'],

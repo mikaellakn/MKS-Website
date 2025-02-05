@@ -1,5 +1,5 @@
 import { oswald } from '@/app/page';
-import Image, { StaticImageData } from 'next/image';
+import Image from 'next/image';
 import React from 'react';
 
 interface HairProductProps {
@@ -7,7 +7,7 @@ interface HairProductProps {
   title: string;
   subtitle?: string;
   provider: string;
-  image: StaticImageData;
+  image: string;
   description: string;
   price?: string;
   ingredients?: string[];
@@ -26,7 +26,7 @@ const HairProductDetails: React.FC<HairProductProps> = ({
 }) => {
   return (
 <div className="hair-product-container">
-      <Image src={image} alt={title} className="product-image" />
+      <Image src={image} alt={title} className="w-full product-image" width={300} height={300}/>
       <div className="product-details">
         <div className='flex w-full justify-between items-center my-[10px] mb-[20px]'>
             <div className="flex flex-col">

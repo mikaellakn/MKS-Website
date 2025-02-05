@@ -1,9 +1,8 @@
-"use client";
+'use client';
 
 import { oswald } from "@/app/page";
 import React, { useState, useEffect } from "react";
 import Product from "./Product";
-import { StaticImageData } from "next/image";
 import Link from "next/link";
 
 interface ProductSectionProps {
@@ -13,7 +12,7 @@ interface ProductSectionProps {
     name: string;
     subtitle: string,
     provider: string;
-    image : StaticImageData,
+    image : string,
     description: string,
     price: number;
     ingredients: string[],
@@ -22,26 +21,31 @@ interface ProductSectionProps {
 }
 
 const ProductSection: React.FC<ProductSectionProps> = ({ title, products }) => {
-  const [cursorPosition, setCursorPosition] = useState({ x: 0, y: 0 });
+  const [isHydrated, setIsHydrated] = useState(false);
+  const [cursorPosition, setCursorPosition] = useState<{ x: number; y: number }>({ x: 0, y: 0 });
   const [isHovering, setIsHovering] = useState(false);
+  
+  useEffect(() => {
+    setIsHydrated(true);
+  }, []);
 
   // Update cursor position
   useEffect(() => {
     const handleMouseMove = (e: MouseEvent) => {
       setCursorPosition({ x: e.clientX, y: e.clientY });
     };
-
+  
     window.addEventListener("mousemove", handleMouseMove);
-
+  
     return () => {
       window.removeEventListener("mousemove", handleMouseMove);
     };
-  }, []);
+  }, []);  
 
   return (
     <div className="relative flex flex-col justify-center items-start px-[120px] py-[60px]">
       {/* Custom cursor */}
-      <div
+{ isHydrated &&     <div
         className={`pointer-events-none fixed w-[80px] h-[80px] p-[10px] border border-1 flex justify-center items-center bg-white bg-opacity-20 border-white rounded-full transition-transform duration-150 ${
           isHovering ? "opacity-100 scale-100" : "opacity-0 scale-50"
         }`}
@@ -52,7 +56,7 @@ const ProductSection: React.FC<ProductSectionProps> = ({ title, products }) => {
         }}
       >
         <p className="font-bold text-[16px] uppercase text-white">view</p>
-      </div>
+      </div>}
 
       {/* Title */}
       <p
