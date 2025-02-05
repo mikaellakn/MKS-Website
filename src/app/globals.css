@@ -29,6 +29,7 @@ body {
   color: var(--foreground);
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
+  color: var(--secondary-color);
 }
 
 /* ========================GENERAL============================ */
@@ -161,6 +162,17 @@ body {
   background-size: cover;
   background-position: center;
   height: calc(100vh - 100px);
+  width: 100%;
+  color: var(--primary-color);
+}
+
+.hero-products {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 60px 120px 0 120px;
+  background-color: var(--tertiary-color);
+  height: calc(100vh - 200px);
   width: 100%;
   color: var(--primary-color);
 }
@@ -328,4 +340,75 @@ body {
 .service-card li{
   font-size: 20px;
   margin: 10px 0;
+}
+
+/* ============SINGLE PRODUCT PAGE ================*/
+.hair-product-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 900px;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid var(--tertiary-color);
+  border-radius: 8px;
+  margin: 60px 0;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  background-color: var(--primary-color)
+}
+
+.product-image {
+  width: 100%;
+  max-height: 300px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.product-details {
+  width: 100%;
+  padding: 10px;
+}
+
+.product-title {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 2px;
+}
+
+.product-subtitle {
+  font-size: 18px;
+  color: rgb(152, 149, 149);
+  font-weight: thin;
+  font-style: italic;
+  margin-bottom: 2px;
+}
+
+.product-provider {
+  font-style: italic;
+  margin-bottom: 20px;
+}
+
+.product-price {
+  font-weight: bold;
+  color: #b2342f;
+}
+
+.product-description {
+  font-size: 16px;
+  margin-bottom: 40px;
+  font-weight: 700;
+}
+
+.product-features {
+  margin-bottom: 40px;
+}
+
+.product-features h3, .product-ingredients h3 {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+
+.product-features ul, .product-ingredients ul {
+  text-align: left;
 }
