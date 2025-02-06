@@ -9,6 +9,9 @@
   font-weight: normal;
 }
 
+html {
+  scroll-behavior: smooth;
+}
 
 :root {
   --background: #F8FAFC;
@@ -171,11 +174,13 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 60px 120px 0 120px;
-  background-color: var(--tertiary-color);
   height: calc(100vh - 200px);
   width: 100%;
   color: var(--primary-color);
+  background: rgb(217,234,253);
+  background: linear-gradient(to bottom, rgba(217,234,253,1) 0%, rgba(248,250,252,0.499124649859944) 83%);
 }
+
 
 .hero-review{
   color: var(--secondary-color);
@@ -350,8 +355,7 @@ body {
   max-width: 900px;
   margin: auto;
   padding: 20px;
-  border: 1px solid var(--tertiary-color);
-  border-radius: 8px;
+  border-radius: 24px;
   margin: 60px 0;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   background-color: var(--primary-color)
@@ -411,4 +415,38 @@ body {
 
 .product-features ul, .product-ingredients ul {
   text-align: left;
+}
+
+/* =============CAREERS================ */
+.hero-careers {
+  display: flex;
+  background-image: url('../../public/images/hero.webp');
+  background-size: cover;
+  background-position: center;
+  justify-content: space-between;
+  align-items: center;
+  padding: 60px 120px 0 120px;
+  height: calc(100vh - 200px);
+  width: 100%;
+  color: var(--primary-color);
+}
+
+/* ===============CONTACT============= */
+.contact-form label{
+  font-size: 16px;
+  color: var(--secondary-color);
+  text-transform: uppercase;
+}
+.contact-form input, .contact-form textarea{
+  width: 100%;
+  padding: 10px 20px;
+  margin: 10px 0;
+  border-radius: 24px;
+  background-color: transparent;
+  border: 2px var(--secondary-color) solid;
+}
+
+.contact-form input:focus, .contact-form textarea:focus{
+  outline: none !important;
+  box-shadow: none !important;
 }

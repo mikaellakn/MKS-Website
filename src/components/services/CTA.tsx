@@ -10,7 +10,7 @@ const CTA =()=> {
             <p className={` body-text`}>Book your appointment now !</p>
             <div className="flex gap-8">
                 <div className="min-w-[230px]">
-                    <PrimaryButton text='Book'/>
+                    <PrimaryButton href="/contact" text='Book'/>
                 </div>
             </div>
         </div>

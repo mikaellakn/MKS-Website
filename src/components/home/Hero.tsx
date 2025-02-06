@@ -21,10 +21,10 @@ export default function Hero(){
                 <p className={`${montserrat.className} body-text`}>Our talented specialist are ready to share their secrets. Don’t loose this opportunity</p>
                 <div className="flex gap-8">
                     <div className="min-w-[230px]">
-                        <PrimaryButton text='Explore'/>
+                        <PrimaryButton href="#usp" text='Explore'/>
                     </div>
                     <div className="min-w-[230px]">
-                        <SecondaryButton text='Services'/>
+                        <SecondaryButton href="/services" text='Services'/>
                     </div>
                 </div>
             </div>

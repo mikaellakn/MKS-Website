@@ -8,11 +8,11 @@ import Image from "next/image";
 const Mission =()=>{
     return(
         <div>
-            <div className="relative mission">
+            <div className="relative mission" id="mission">
                 <p className={`${oswald} text-[20px] uppercase font-semibold`}>our mission</p>
                 <p className={`${oswald} text-[60px] leading-[60px] uppercase font-bold mb-[20px]`}>Luxury salon where you will feel unique and special</p>
                 <p className="text-[18px] max-w-[60%]">Welcome to the Hairy salon. A modern beauty salon helps realize a person&apos;s natural desire to look good, to remain beautiful and desirable. We are happy to offer you a wide range of hair care services. We know the secret of how to emphasize your natural attractiveness and slow down the passage of time.</p>
-                <PrimaryButton text="Book"/>
+                <PrimaryButton href="/contact" text="Book"/>
                 <Image src={image} alt="image" width={1000} className="absolute left-[50%] top-[600px] translate-x-[-50%]"/>
             </div>
             <div className="mission-2">

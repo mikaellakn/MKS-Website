@@ -10,7 +10,9 @@ export default function Footer() {
       <div className="footer">
         <div className="flex w-full justify-between border-b border-[#000957] py-[20px]">
           <p className={`${oswald.className} text-[72px] font-bold uppercase`}>contact us</p>
-          <Image src={arrowRight} alt="arrow-right" width={60}/>
+          <Link href="/contact">
+            <Image src={arrowRight} alt="arrow-right" width={60}/>
+          </Link>
         </div>
         <div className="h-full w-full flex justify-between items-start gap-[120px] py-[40px]">
           <div>
@@ -35,13 +37,13 @@ export default function Footer() {
               <p className="title">Quick Links</p>
               <ul className="">
               <li>
-              <Link href='/'>About</Link>
+              <Link href='/about'>About</Link>
               </li>
               <li>
-                <Link href='/'>Services</Link>
+                <Link href='/services'>Services</Link>
               </li>
               <li>
-                <Link href='/'>Products</Link>
+                <Link href='/products'>Products</Link>
               </li>
               </ul>
             </div>

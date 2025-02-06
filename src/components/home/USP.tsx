@@ -20,7 +20,7 @@ export default function USP(){
     ]
 
     return(
-        <div className="usp-section">
+        <div className="usp-section" id="usp">
             <div className="usp-section1">
                 <div className="flex w-[60%] justify-center items-center h-full">
                     <Image alt="image-1" src={image3} width={600} height={600}/>

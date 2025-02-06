@@ -26,7 +26,7 @@ export default function Navbar() {
           </li>
         </ul>
         <div className="flex justify-end items-center min-w-[130px]">
-            <SecondaryButton text="CONTACT"/>
+            <SecondaryButton href="/contact" text="CONTACT"/>
         </div>
       </div>
     );
