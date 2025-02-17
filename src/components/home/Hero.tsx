@@ -1,12 +1,9 @@
 import React from "react";
 import SecondaryButton from '../general/SecondaryButton';
 import PrimaryButton from "../general/PrimaryButton";
-import avatar from "../../../public/images/avatar.webp";
-import arrowRight from "../../../public/icons/arrow-right.svg";
-import arrowLeft from "../../../public/icons/arrow-left.svg";
 import { Montserrat } from "next/font/google";
 import { oswald } from "@/app/page";
-import Image from "next/image";
+import ReviewCarousel from "./ReviewCarousel";
 
 export const montserrat = Montserrat({
     subsets: ['latin'],
@@ -29,21 +26,7 @@ export default function Hero(){
                 </div>
             </div>
             <div className="w-[40%] hero-review">
-                <p className={`${oswald.className} text-[28px] font-bold uppercase`}>reviews</p>
-                <div className="flex justify-between items-center gap-[10px]">
-                    <Image alt='customer-image' src={avatar} width={60} className="avatar"/>
-                    <div>
-                        <p className="text-[20px] font-bold">Kristen Stewart</p>
-                        <p className="text-[16px] font-semibold">1 week ago</p>
-                    </div>
-                </div>
-                <div>
-                    <p className="text-[18px] font-semibold">“Thanks to the masters of MK salon for creating an incredible hairstyle! You made my hair extremely soft, I recommend!”</p>
-                </div>
-                <div className="flex justify-center gap-4 w-full mt-[20px]">
-                    <Image alt='arrow-left' src={arrowLeft} width={30} className="cursor-pointer my-arrow"/>
-                    <Image alt='arrow-right' src={arrowRight} width={30} className="cursor-pointer"/>
-                </div>
+                <ReviewCarousel/>
             </div>
         </div>
     )

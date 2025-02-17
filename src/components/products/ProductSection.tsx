@@ -1,4 +1,4 @@
-'use client';
+"use client";
 
 import { oswald } from "@/app/page";
 import React, { useState, useEffect } from "react";

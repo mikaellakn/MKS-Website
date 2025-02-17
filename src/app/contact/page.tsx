@@ -1,10 +1,7 @@
 import React from "react";
 import ContactForm from "@/components/contact/ContactForm";
-import phone from "../../../public/icons/phone.svg";
-import location from "../../../public/icons/location.svg";
-import mail from "../../../public/icons/mail.svg";
 import { oswald } from "../page";
-import Image from "next/image";
+import LocationCarousel from "./LocationCarousel";
 
 const Contact =()=>{
     return (
@@ -15,36 +12,7 @@ const Contact =()=>{
                         <p className={`${oswald.className} text-[46px] uppercase font-bold leading-[45px] my-[20px]`}>Contact our team to improve the condition of your hair</p>
                         <p className="text-[18px]">Welcome to the HAIRY salon. A modern beauty salon helps realize a persons natural desire to look good, to remain beautiful and desirable. We are happy to offer you a wide range of hair care services.</p>
                     </div>
-                    <div className="flex flex-col w-full">
-                        <p className={`${oswald.className} text-[24px] uppercase font-bold mt-[40px] mb-[10px]`}>New york</p>
-                        <div className="flex w-full gap-x-[10px] my-[10px]">
-                            <Image src={location} alt="location-icon" width={20}></Image>
-                            <p>5 Washington Square, New York, USA</p>
-                        </div>
-                        <div className="flex w-full gap-x-[10px] my-[10px]">
-                            <Image src={phone} alt="phone-icon" width={20}></Image>
-                            <p>+1 212 425 8617</p>
-                        </div>
-                        <div className="flex w-full gap-x-[10px] my-[10px]">
-                            <Image src={mail} alt="mail-icon" width={20}></Image>
-                            <p>hello_hairy@office.com</p>
-                        </div>
-                    </div>
-                    <div className="flex flex-col w-full">
-                        <p className={`${oswald.className} text-[24px] uppercase font-bold mt-[40px] mb-[10px]`}>New york</p>
-                        <div className="flex w-full gap-x-[10px] my-[10px]">
-                            <Image src={location} alt="location-icon" width={20}></Image>
-                            <p>5 Washington Square, New York, USA</p>
-                        </div>
-                        <div className="flex w-full gap-x-[10px] my-[10px]">
-                            <Image src={phone} alt="phone-icon" width={20}></Image>
-                            <p>+1 212 425 8617</p>
-                        </div>
-                        <div className="flex w-full gap-x-[10px] my-[10px]">
-                            <Image src={mail} alt="mail-icon" width={20}></Image>
-                            <p>hello_hairy@office.com</p>
-                        </div>
-                    </div>
+                    <LocationCarousel/>
                 </div>
             <ContactForm/>
         </div>

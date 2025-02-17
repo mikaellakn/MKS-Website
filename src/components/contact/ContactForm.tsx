@@ -55,7 +55,7 @@ const ContactForm: React.FC = () => {
   };
 
   return (
-    <div className="flex flex-1 flex-col mx-auto p-6 border rounded-[24px] border-solid bg-[#D9EAFD] bg-opacity-50">
+    <div className="flex flex-1 flex-col mx-auto p-6 border rounded-[24px] border-solid bg-[#D9EAFD] bg-opacity-50 shadow-md">
       <h2 className={`${oswald.className} text-[48px] font-bold uppercase mb-4`}>Send us a message</h2>
 
       {success && (

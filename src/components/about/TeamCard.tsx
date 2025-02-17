@@ -12,10 +12,10 @@ interface Props {
 const TeamCard: React.FC<Props> =({image, name, position, description})=>{
     return (
         <>
-        <div className="flex flex-col w-[380px] rounded-[24px] bg-[#000957] text-[#F8FAFC]">
+        <div className="flex flex-col w-[380px] rounded-[24px] bg-[#000957] text-[#F8FAFC] shadow-md">
             <div className="relative">
                 <Image src={image} alt="image" className="w-full rounded-t-[24px]"/>
-                <div className="absolute bottom-0 left-0 w-full h-[30px] bg-gradient-to-t from-[#000957] to-transparent"></div>
+                <div className="absolute bottom-0 left-0 w-full h-[20px] team-card-gradient"></div>
             </div>
             <div className="flex flex-col py-8 px-4 h-full">
                 {/* Name and Position Section */}
