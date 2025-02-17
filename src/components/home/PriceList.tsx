@@ -6,9 +6,9 @@ import Link from "next/link";
 export default function PriceList(){
     return (
         <div className="pricelist-container">
-            <div className="flex w-full justify-between items-center">
-                <p className={`${oswald.className} text-[72px] font-bold uppercase text-[#000957]`}>price list</p>
-                <Link href={'/services'}>
+            <div className="flex flex-col md:flex-row w-full justify-between items-center">
+                <p className={`${oswald.className} text-[52px] md:text-[72px] font-bold uppercase text-[#000957]`}>price list</p>
+                <Link href={'/services'} className="price-list-link">
                     <PrimaryButton text="FULL PRICELIST" />
                 </Link>
             </div>

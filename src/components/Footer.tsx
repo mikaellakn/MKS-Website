@@ -9,16 +9,16 @@ export default function Footer() {
     return (
       <div className="footer">
         <div className="flex w-full justify-between border-b border-[#000957] py-[20px]">
-          <p className={`${oswald.className} text-[72px] font-bold uppercase`}>contact us</p>
+          <p className={`${oswald.className} text-[42px] md:text-[72px] font-bold uppercase`}>contact us</p>
           <Link href="/contact">
             <Image src={arrowRight} alt="arrow-right" width={60}/>
           </Link>
         </div>
-        <div className="h-full w-full flex justify-between items-start gap-[120px] py-[40px]">
+        <div className="h-full w-full flex flex-col md:flex-row justify-between items-start gap-[30px] md:gap-[120px] py-[30px] md:py-[40px]">
           <div>
             <p className="logo">Michael K.</p>
           </div>
-          <div className="flex gap-[120px]">
+          <div className="flex flex-col md:flex-row gap-[20px] md:gap-[120px]">
             <div className="socials">
               <p className="title">Visit us on social media !</p>
               <ul className="">

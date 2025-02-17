@@ -22,22 +22,22 @@ export default function USP(){
     return(
         <div className="usp-section" id="usp">
             <div className="usp-section1">
-                <div className="flex w-[60%] justify-center items-center h-full">
+                <div className="flex w-full md:w-[60%] justify-center items-center h-full">
                     <Image alt="image-1" src={image3} width={600} height={600}/>
                 </div>
-                <div className="flex flex-col w-[80%]">
-                    <div className="flex flex-col gap-[20px]">
+                <div className="flex flex-col w-full md:w-[80%]">
+                    <div className="flex flex-col md:gap-[20px]">
                         <p className="text-[18px] font-semibold">THE BEST STUDIO SINCE 1998</p>
-                        <p className={`${oswald.className} text-[62px] uppercase font-bold leading-[62px]`}>We will change your out looks</p>
+                        <p className={`${oswald.className} md:text-[72px] text-[42px] uppercase font-bold leading-[62px]`}>We will change your out looks</p>
                         <p className="text-[20px]">Our talented specialist are ready to share their secrets. Don’t lose this opportunity</p>
                     </div>
-                    <div className="flex justify-between items-center">
+                    <div className="flex justify-between items-center md:max-w-[80%]">
                         <div className="flex flex-col justify-center items-center">
-                            <p className={`${oswald.className} text-[80px] font-bold`}>35</p>
+                            <p className={`${oswald.className} text-[60px] md:text-[80px] self-start font-bold`}>35</p>
                             <p className="text-[18px] font-semibold uppercase">years experience</p>
                         </div>
                         <div className="flex flex-col justify-center items-center">
-                            <p className={`${oswald.className} text-[80px] font-bold`}>10</p>
+                            <p className={`${oswald.className} text-[60px] md:text-[80px] font-bold self-start`}>10</p>
                             <p className="text-[18px] font-semibold uppercase">amazing experts</p>
                         </div>
                     </div>

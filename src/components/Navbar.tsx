@@ -1,4 +1,5 @@
 "use client";
+import { X } from "lucide-react";
 import { oswald } from "@/app/page";
 import Link from "next/link";
 import { useState, useEffect } from "react";
@@ -9,6 +10,33 @@ const SecondaryButton = dynamic(() => import("./general/SecondaryButton"), { ssr
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [isHydrated, setIsHydrated] = useState(false);
+
+  useEffect(() => {
+    if (isOpen) {
+      // Save current scroll position
+      const scrollPosition = window.scrollY;
+      // Add styles to prevent scrolling
+      document.body.style.position = 'fixed';
+      document.body.style.top = `-${scrollPosition}px`;
+      document.body.style.width = '100%';
+    } else {
+      // Restore scrolling and position
+      const scrollPosition = document.body.style.top;
+      document.body.style.position = '';
+      document.body.style.top = '';
+      document.body.style.width = '';
+      if (scrollPosition) {
+        window.scrollTo(0, parseInt(scrollPosition.replace('px', '')) * -1);
+      }
+    }
+
+    // Cleanup function
+    return () => {
+      document.body.style.position = '';
+      document.body.style.top = '';
+      document.body.style.width = '';
+    };
+  }, [isOpen]);
 
   useEffect(() => {
     setIsHydrated(true);
@@ -23,7 +51,7 @@ export default function Navbar() {
   }
 
   return (
-    <div className={`nav ${oswald.className} relative`}>
+    <div className={`nav ${oswald.className}`}>
       <div className="container mx-auto flex  justify-between items-center p-4">
         {/* LOGO */}
         <div className="flex justify-start items-center">
@@ -64,24 +92,78 @@ export default function Navbar() {
 
       {/* MOBILE MENU*/}
       <div
-        className={`fixed top-0 right-0 w-full h-full bg-[#000957] text-white transform ${
+        className={`justify-center fixed top-0 right-0 w-full h-full bg-[#000957] transform ${
           isOpen ? "translate-x-0" : "translate-x-full"
         } transition-transform duration-300 ease-in-out shadow-lg`}
       >
         {/* Close Button */}
         <button onClick={toggleMenu} className="absolute top-4 right-4 text-3xl">
-          Close
+        <X size={40} />
         </button>
 
         {/* Mobile Menu Items */}
-        <ul className="mobile-menu">
-          <li><Link href="/" onClick={toggleMenu}>Home</Link></li>
-          <li><Link href="/about" onClick={toggleMenu}>About</Link></li>
-          <li><Link href="/services" onClick={toggleMenu}>Services</Link></li>
-          <li><Link href="/products" onClick={toggleMenu}>Products</Link></li>
-          <li><Link href="/careers" onClick={toggleMenu}>Careers</Link></li>
-          <li><SecondaryButton href="/contact" text="CONTACT" /></li>
-        </ul>
+        <ul className="mobile-menu flex flex-col items-center w-full">
+      <li className="w-full text-center transform -translate-x-4 transition-all hover:translate-x-0">
+        <Link 
+          href="/" 
+          onClick={toggleMenu}
+          className="block w-full py-2 transition-colors"
+        >
+          Home
+        </Link>
+      </li>
+      
+      <li className="w-full text-center transform translate-x-4 transition-all hover:translate-x-0">
+        <Link 
+          href="/about" 
+          onClick={toggleMenu}
+          className="block w-full py-2 transition-colors"
+        >
+          About
+        </Link>
+      </li>
+      
+      <li className="w-full text-center transform -translate-x-4 transition-all hover:translate-x-0">
+        <Link 
+          href="/services" 
+          onClick={toggleMenu}
+          className="block w-full py-2 transition-colors"
+        >
+          Services
+        </Link>
+      </li>
+      
+      <li className="w-full text-center transform translate-x-4 transition-all hover:translate-x-0">
+        <Link 
+          href="/products" 
+          onClick={toggleMenu}
+          className="block w-full py-2 transition-colors"
+        >
+          Products
+        </Link>
+      </li>
+      
+      <li className="w-full text-center transform -translate-x-4 transition-all hover:translate-x-0">
+        <Link 
+          href="/careers" 
+          onClick={toggleMenu}
+          className="block w-full py-2 transition-colors"
+        >
+          Careers
+        </Link>
+      </li>
+      
+      <li className="w-full text-center transform translate-x-4 transition-all hover:translate-x-0">
+        <Link 
+          href="/careers" 
+          onClick={toggleMenu}
+          className="block w-full py-2 transition-colors"
+        >
+          Contact
+        </Link>
+      </li>
+
+    </ul>
       </div>
     </div>
   );

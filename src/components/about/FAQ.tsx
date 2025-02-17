@@ -27,8 +27,8 @@ const FAQ = () => {
   };  
 
   return (
-    <div className="p-[120px] bg-[#000957] text-[#F8FAFC] flex flex-col justify-center align-center">
-      <h2 className={`${oswald} text-[60px] leading-[42px] uppercase font-bold mb-[80px] text-center`}>Frequently Asked Questions</h2>
+    <div className="px-[30px] py-[60px] md:p-[120px] bg-[#000957] text-[#F8FAFC] flex flex-col justify-center align-center shadow-sm">
+      <h2 className={`${oswald} text-[42px] md:text-[60px] leading-snug uppercase font-bold mb-[40px] md:mb-[80px] text-center`}>Frequently Asked Questions</h2>
       <div className="space-y-8">
         {faqs.map((faq, index) => (
           <div

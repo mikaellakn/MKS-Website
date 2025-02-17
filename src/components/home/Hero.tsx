@@ -13,10 +13,10 @@ export const montserrat = Montserrat({
 export default function Hero(){
     return (
         <div className="hero-section">
-            <div className="flex flex-col items-start justify-start h-full w-[60%] p-[60px] mb-[60px] gap-8">
-                <p className={`${oswald.className} text-[72px] font-bold uppercase leading-[72px]`}>hair experience like no other</p>
+            <div className="flex flex-col items-start justify-start h-full md:w-[60%] md:p-[60px] w-full md:mb-[60px] md:gap-8">
+                <p className={`${oswald.className} text-[42px] md:text-[72px] font-bold uppercase leading-tight`}>hair experience like no other</p>
                 <p className={`${montserrat.className} body-text`}>Our talented specialist are ready to share their secrets. Don’t loose this opportunity</p>
-                <div className="flex gap-8">
+                <div className="flex md:gap-8 gap-4 flex-col justify-center items-center w-full md:w-auto md:flex-row md:mt-0 mt-4">
                     <div className="min-w-[230px]">
                         <PrimaryButton href="#usp" text='Explore'/>
                     </div>
@@ -25,7 +25,7 @@ export default function Hero(){
                     </div>
                 </div>
             </div>
-            <div className="w-[40%] hero-review">
+            <div className="md:w-[40%] hero-review rounded-[12px] md:rounded-none">
                 <ReviewCarousel/>
             </div>
         </div>

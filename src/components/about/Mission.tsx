@@ -8,17 +8,17 @@ import Image from "next/image";
 const Mission =()=>{
     return(
         <div>
-            <div className="relative mission" id="mission">
+            <div className="relative mission" id="mission z-0">
                 <p className={`${oswald} text-[20px] uppercase font-semibold`}>our mission</p>
-                <p className={`${oswald} text-[60px] leading-[60px] uppercase font-bold mb-[20px]`}>Luxury salon where you will feel unique and special</p>
-                <p className="text-[18px] max-w-[60%]">Welcome to the Hairy salon. A modern beauty salon helps realize a person&apos;s natural desire to look good, to remain beautiful and desirable. We are happy to offer you a wide range of hair care services. We know the secret of how to emphasize your natural attractiveness and slow down the passage of time.</p>
+                <p className={`${oswald} text-[32px] md:text-[60px] leading-tight uppercase font-bold mb-[20px]`}>Luxury salon where you will feel unique and special</p>
+                <p className="text-[18px] md:max-w-[60%]">Welcome to the Hairy salon. A modern beauty salon helps realize a person&apos;s natural desire to look good, to remain beautiful and desirable. We are happy to offer you a wide range of hair care services. We know the secret of how to emphasize your natural attractiveness and slow down the passage of time.</p>
                 <PrimaryButton href="/contact" text="Book"/>
-                <Image src={image} alt="image" width={1000} className="absolute left-[50%] top-[600px] translate-x-[-50%]"/>
+                <Image src={image} alt="image" width={1000} className="image md:absolute left-[50%] top-[600px] translate-x-[-50%]"/>
             </div>
             <div className="mission-2">
-            <div className="flex-1 flex flex-col justify-start items-center px-[60px] h-full gap-[30px]">
+            <div className="flex-1 flex flex-col justify-start items-center md:px-[60px] h-full md:gap-[30px]">
                 <p className={`${oswald} text-[20px] uppercase font-semibold`}>our story</p>
-                <p className={`${oswald} text-[52px] leading-[52px] uppercase font-bold`}>Luxury salon story</p>
+                <p className={`${oswald} text-[32px] md:text-[52px] leading-tight uppercase font-bold`}>Luxury salon story</p>
                 <p className="flex flex-col justify-end text-[18px] font-thin leading-loose text-left mt-[10px]">
                 In the heart of the bustling city, nestled on a charming cobblestone street, stands Luxe Locks Salon—a haven where beauty meets artistry. What started as a dream in a tiny apartment transformed into a celebrated destination for self-expression, confidence, and timeless style.
 
