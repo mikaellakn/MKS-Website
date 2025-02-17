@@ -58,7 +58,7 @@ const QuoteReviewCarousel = () => {
         </div>
         
         <div className="mb-8">
-          <p className={`${oswald.className} text-[28px] leading-[32px] font-bold uppercase`}>
+          <p className={`${oswald.className} text-[28px] leading-[32px] font-bold uppercase md:min-h-[140px]`}>
           &quot;{reviews[currentIndex].review}&quot;
           </p>
         </div>
