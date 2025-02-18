@@ -50,7 +50,7 @@ const LocationCarousel = () => {
   };
 
   return (
-    <div className="w-full max-w-md">
+    <div className="w-full max-w-md self-start">
       <div className="transition-all duration-500 ease-in-out">
         <p className={`${oswald.className} text-[24px] uppercase font-bold mt-[40px] mb-[10px]`}>
           {locations[currentIndex].city}
