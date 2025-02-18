@@ -154,12 +154,12 @@ const Services =()=>{
 
     return (
         <>
-        <div className="flex flex-col justify-center items-center bg-[#F8FAFC] px-[120px] py-[60px]">
+        <div className="flex flex-col justify-center items-center bg-[#F8FAFC] md:px-[120px] md:py-[60px]">
             <ServiceCard
             title="Women's Services"
             services={womenServices}
             />
-            <div className="border-1 border-t border-b border-[#000957] w-full">
+            <div className="border-1 border-t border-opacity-30 border-b border-[#000957] w-full">
                 <ServiceCard
                 title="Men's Services"
                 services={menServices}

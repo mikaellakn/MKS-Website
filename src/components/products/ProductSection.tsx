@@ -43,7 +43,7 @@ const ProductSection: React.FC<ProductSectionProps> = ({ title, products }) => {
   }, []);  
 
   return (
-    <div className="relative flex flex-col justify-center items-start px-[120px] py-[60px]">
+    <div className="relative flex flex-col justify-center items-start md:px-[120px] md:py-[60px] mb-[60px] md:mb-0">
       {/* Custom cursor */}
 { isHydrated &&     <div
         className={`pointer-events-none fixed w-[80px] h-[80px] p-[10px] border border-1 flex justify-center items-center bg-white bg-opacity-20 border-white rounded-full transition-transform duration-150 ${
@@ -60,13 +60,13 @@ const ProductSection: React.FC<ProductSectionProps> = ({ title, products }) => {
 
       {/* Title */}
       <p
-        className={`${oswald.className} text-[72px] font-bold uppercase leading-[72px]`}
+        className={`${oswald.className} text-[52px] md:text-[72px] font-bold uppercase leading-tight text-center w-full`}
       >
         {title}
       </p>
 
       {/* Products Grid */}
-      <div className="grid grid-cols-3 justify-center items-center gap-x-[40px] gap-y-[60px] w-full mt-[60px]">
+      <div className="grid grid-cols-1 md:grid-cols-3 place-items-center justify-center items-center md:gap-x-[40px] gap-y-[60px] w-full mt-[60px]">
         {products.map((product) => (
           <div
             key={product.id}

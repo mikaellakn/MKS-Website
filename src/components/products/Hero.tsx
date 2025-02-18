@@ -11,7 +11,7 @@ export const montserrat = Montserrat({
 export default function Hero(){
     return (
         <div className="hero-products">
-            <div className="flex flex-col items-center justify-center h-full w-full p-[60px] mb-[60px] gap-8 text-[#000957]">
+            <div className="flex flex-col items-center justify-center h-full w-full md:p-[60px] mb-[60px] gap-8 text-[#000957]">
                 <p className={`${oswald.className} text-[72px] font-bold uppercase leading-[72px]`}>SHOP OUR PRODUCTS</p>
                 <p className={`${montserrat.className} text-[20px]`}>We provide a wide range of Hair and Nail care products, available for purchase at the salon.</p>
                 <div className="flex gap-8 mt-[40px]">

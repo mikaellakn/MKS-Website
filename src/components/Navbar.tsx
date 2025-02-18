@@ -155,7 +155,7 @@ export default function Navbar() {
       
       <li className="w-full text-center transform translate-x-4 transition-all hover:translate-x-0">
         <Link 
-          href="/careers" 
+          href="/contact" 
           onClick={toggleMenu}
           className="block w-full py-2 transition-colors"
         >
