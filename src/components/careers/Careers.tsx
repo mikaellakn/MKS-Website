@@ -1,5 +1,6 @@
 import React from "react";
 import Position from "./Position";
+import ScrollAnimation from "../ScrollAnimation";
 const positions = [
     {
         id: '1',
@@ -37,7 +38,9 @@ const Careers =()=> {
     return (
         <div className="flex flex-col w-full px-[10px] py-[30px] gap-y-[30px] md:px-[120px] md:py-[60px] md:gap-y-[60px]">
             {positions.map((position) => (
-                <Position key={position.id} title={position.title} location={position.location} description={position.description}/>
+                <ScrollAnimation key={position.id}>
+                    <Position title={position.title} location={position.location} description={position.description}/>
+                </ScrollAnimation>
             ))}
         </div>
     )

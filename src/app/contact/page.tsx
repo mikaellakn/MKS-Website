@@ -2,6 +2,7 @@ import React from "react";
 import ContactForm from "@/components/contact/ContactForm";
 import { oswald } from "../page";
 import LocationCarousel from "./LocationCarousel";
+import ScrollAnimation from "@/components/ScrollAnimation";
 
 const Contact =()=>{
     return (
@@ -14,7 +15,7 @@ const Contact =()=>{
                     </div>
                     <LocationCarousel/>
                 </div>
-            <ContactForm/>
+            <ScrollAnimation><ContactForm/></ScrollAnimation>
         </div>
     )
 }

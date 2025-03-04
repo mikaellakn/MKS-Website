@@ -4,6 +4,7 @@ import USP from "@/components/home/USP";
 import PriceList from "@/components/home/PriceList";
 import Reviews from "@/components/home/Reviews";
 import { Oswald } from "next/font/google";
+import ScrollAnimation from "../components/ScrollAnimation";
 
 export const oswald = Oswald({
   subsets: ['latin'],
@@ -14,10 +15,10 @@ export default function Home() {
   return ( 
   <>
     <Hero/>
-    <USP/>
-    <FeaturedServices/>
-    <PriceList/>
-    <Reviews/>
+    <ScrollAnimation><USP/></ScrollAnimation>
+    <ScrollAnimation><FeaturedServices/></ScrollAnimation>
+    <ScrollAnimation><PriceList/></ScrollAnimation>
+    <ScrollAnimation><Reviews/></ScrollAnimation>
   </>
   );
 }

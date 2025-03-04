@@ -91,80 +91,71 @@ export default function Navbar() {
       </div>
 
       {/* MOBILE MENU*/}
-      <div
-        className={`justify-center fixed top-0 right-0 w-full h-full bg-[#000957] transform ${
-          isOpen ? "translate-x-0" : "translate-x-full"
-        } transition-transform duration-300 ease-in-out shadow-lg`}
+<div
+  className={`
+    fixed top-0 right-0 w-full h-full bg-[#000957] 
+    transform transition-all duration-500 ease-in-out 
+    ${isOpen 
+      ? "translate-x-0 opacity-100 backdrop-blur-sm" 
+      : "translate-x-full opacity-0 backdrop-blur-none"
+    } 
+    flex flex-col justify-center items-center 
+    z-50 overflow-hidden
+  `}
+>
+  {/* Close Button with Enhanced Transition */}
+  <button 
+    onClick={toggleMenu} 
+    className={`
+      absolute top-6 right-6 text-white 
+      transform transition-all duration-300 
+      hover:rotate-90 hover:scale-110
+    `}
+  >
+    <X size={40} className="text-white" />
+  </button>
+
+  {/* Mobile Menu Items with Alternating Translations */}
+  <ul className="mobile-menu space-y-6 text-center">
+    {[
+      { href: "/", label: "Home" },
+      { href: "/about", label: "About" },
+      { href: "/services", label: "Services" },
+      { href: "/products", label: "Products" },
+      { href: "/careers", label: "Careers" },
+      { href: "/contact", label: "Contact" }
+    ].map((item, index) => (
+      <li 
+        key={item.href}
+        className={`
+          py-[12px]
+          transform transition-all duration-500 
+          ${isOpen 
+            ? `opacity-100 translate-y-0 delay-${index * 100}` 
+            : "opacity-0 translate-y-10"
+          }
+        `}
       >
-        {/* Close Button */}
-        <button onClick={toggleMenu} className="absolute top-4 right-4 text-3xl">
-        <X size={40} />
-        </button>
-
-        {/* Mobile Menu Items */}
-        <ul className="mobile-menu flex flex-col items-center w-full">
-      <li className="w-full text-center transform -translate-x-4 transition-all hover:translate-x-0">
         <Link 
-          href="/" 
+          href={item.href} 
           onClick={toggleMenu}
-          className="block w-full py-2 transition-colors"
+          className={`
+            text-2xl text-white font-bold 
+            block w-full
+            transform transition-all duration-300 
+            ${index % 2 === 0 
+              ? "-translate-x-4 hover:translate-x-2" 
+              : "translate-x-4 hover:translate-x-0"
+            }
+            hover:text-gray-300
+          `}
         >
-          Home
+          {item.label}
         </Link>
       </li>
-      
-      <li className="w-full text-center transform translate-x-4 transition-all hover:translate-x-0">
-        <Link 
-          href="/about" 
-          onClick={toggleMenu}
-          className="block w-full py-2 transition-colors"
-        >
-          About
-        </Link>
-      </li>
-      
-      <li className="w-full text-center transform -translate-x-4 transition-all hover:translate-x-0">
-        <Link 
-          href="/services" 
-          onClick={toggleMenu}
-          className="block w-full py-2 transition-colors"
-        >
-          Services
-        </Link>
-      </li>
-      
-      <li className="w-full text-center transform translate-x-4 transition-all hover:translate-x-0">
-        <Link 
-          href="/products" 
-          onClick={toggleMenu}
-          className="block w-full py-2 transition-colors"
-        >
-          Products
-        </Link>
-      </li>
-      
-      <li className="w-full text-center transform -translate-x-4 transition-all hover:translate-x-0">
-        <Link 
-          href="/careers" 
-          onClick={toggleMenu}
-          className="block w-full py-2 transition-colors"
-        >
-          Careers
-        </Link>
-      </li>
-      
-      <li className="w-full text-center transform translate-x-4 transition-all hover:translate-x-0">
-        <Link 
-          href="/contact" 
-          onClick={toggleMenu}
-          className="block w-full py-2 transition-colors"
-        >
-          Contact
-        </Link>
-      </li>
-
-    </ul>
-      </div>
+    ))}
+  </ul>
+</div>
     </div>
   );
 }

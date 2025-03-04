@@ -17,7 +17,7 @@ const Position =({title, description, location} : PositionProps)=> {
             </div>
             <div className="flex flex-col md:flex-row justify-between items-center w-full">
                 <p className="text-[18px] font-light md:max-w-[80%] text-center md:text-left mb-[20px] md:mb-0">{description}</p>
-                <PrimaryButton text="I'm interested"/>
+                <PrimaryButton text="I'm interested" href="/contact"/>
             </div>
         </div>
     )

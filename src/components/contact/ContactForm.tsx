@@ -34,19 +34,48 @@ const ContactForm: React.FC = () => {
     return Object.keys(newErrors).length === 0;
   };
 
-  // Handle form submission
+  // // Handle form submission
+  // const handleSubmit = async (e: React.FormEvent) => {
+  //   e.preventDefault();
+  //   if (!validateForm()) return;
+
+  //   setLoading(true);
+  //   try {
+  //     // Simulate an API request (replace with actual API call)
+  //     await new Promise((resolve) => setTimeout(resolve, 2000));
+
+  //     setSuccess(true);
+  //     setFormData({ name: "", email: "", message: "" });
+  //     setErrors({});
+  //   } catch (error) {
+  //     console.error("Error submitting form", error);
+  //   } finally {
+  //     setLoading(false);
+  //   }
+  // };
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!validateForm()) return;
-
+  
     setLoading(true);
     try {
-      // Simulate an API request (replace with actual API call)
-      await new Promise((resolve) => setTimeout(resolve, 2000));
-
-      setSuccess(true);
-      setFormData({ name: "", email: "", message: "" });
-      setErrors({});
+      const response = await fetch('/api/send-email', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+  
+      if (response.ok) {
+        setSuccess(true);
+        setFormData({ name: "", email: "", message: "" });
+        setErrors({});
+      } else {
+        // Handle error
+        console.error('Failed to send email');
+      }
     } catch (error) {
       console.error("Error submitting form", error);
     } finally {

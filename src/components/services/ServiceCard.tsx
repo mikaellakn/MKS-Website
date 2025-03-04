@@ -1,5 +1,6 @@
 import { oswald } from "@/app/page";
 import React from "react";
+import ScrollAnimation from "../ScrollAnimation";
 
 interface Service {
     title: string;
@@ -26,16 +27,18 @@ interface Service {
               className={`flex w-full justify-start ${index % 2 === 0 ? "md:justify-end" : "md:justify-start"}`}
             >
               <div>
-                <p className={`${oswald.className} text-[32px] md:text-[40px] font-bold uppercase text-[#000957]  md:text-[#D9EAFD] md:bg-[#000957] md:text-center rounded-[24px] text-left`}>
+                <p className={`${oswald.className} text-[32px] md:text-[40px] font-bold uppercase text-[#000957]  md:text-[#D9EAFD] md:bg-[#000957] md:text-center rounded-[24px] text-left px-[10px]`}>
                   {service.title}
                 </p>
-                <div>
-                  <ul>
-                    {service.items.map((item, idx) => (
-                      <li key={idx} className="font-bold">{item}</li>
-                    ))}
-                  </ul>
-                </div>
+                <ScrollAnimation>
+                  <div>
+                    <ul>
+                      {service.items.map((item, idx) => (
+                        <li key={idx} className="font-bold">{item}</li>
+                      ))}
+                    </ul>
+                  </div>
+                </ScrollAnimation>
               </div>
             </div>
           ))}
